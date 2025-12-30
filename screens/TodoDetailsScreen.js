@@ -9,11 +9,7 @@ export default function TodoDetailsScreen({ route, navigation }) {
   const { removeTodo: zRemoveTodo } = useTodoStore();
 
   const handleDelete = () => {
-    // Utilise Zustand comme source principale
     zRemoveTodo(id);
-
-    // Appel Redux conservé pour référence; décommentez si vous souhaitez supprimer aussi côté Redux
-    // dispatch(removeTodo(id));
 
     navigation.goBack();
   };
